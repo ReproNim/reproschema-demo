@@ -38,10 +38,6 @@
             "variableName": "Activity3_schema",
             "prefLabel": {"en": "Enter Input"}
             },
-            {"isAbout": "../activities/Activity4/Activity4_schema",
-            "variableName": "Activity4_schema",
-            "prefLabel": {"en": "Sign Consent"}
-            },
             {"isAbout": "../activities/selectActivity/selectActivity_schema",
             "variableName": "selectActivity_schema",
             "prefLabel": {"en": "Select Response"}
@@ -57,8 +53,7 @@
             "../activities/Activity2/Activity2_schema",
             "../activities/Activity3/Activity3_schema",
             "../activities/selectActivity/selectActivity_schema",
-            "../activities/voiceActivity/voiceActivity_schema",
-            "../activities/Activity4/Activity4_schema"
+            "../activities/voiceActivity/voiceActivity_schema"
         ],
 		"shuffle": false,
 		"allow": [
