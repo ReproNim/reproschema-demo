@@ -22,7 +22,7 @@
 	],
 	"ui": {
         "addProperties": [
-            {"isAbout": "../activities/consent/consent_schema",
+            {"isAbout": "../activities/0_consent/consent_schema",
             "variableName": "consent_schema",
             "prefLabel": {"en": "Sign Consent"}
             },
@@ -48,7 +48,7 @@
             }
         ],
     "order": [
-            "../activities/consent/consent_schema",
+            "../activities/0_consent/consent_schema",
 	        "../activities/Activity1/activity1_schema",
             "../activities/Activity2/Activity2_schema",
             "../activities/Activity3/Activity3_schema",
