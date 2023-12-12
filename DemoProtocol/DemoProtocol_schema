@@ -26,6 +26,10 @@
             "variableName": "consent_schema",
             "prefLabel": {"en": "Sign Consent"}
             },
+            {"isAbout": "../activities/0_audio/audio_check_schema",
+            "variableName": "audio_check_schema",
+            "prefLabel": {"en": "Audio Check"}
+            },
             {"isAbout": "../activities/1_demographics/demographics_schema",
             "variableName": "demographics_schema",
             "prefLabel": {"en": "Demographics"}
@@ -33,12 +37,28 @@
             {"isAbout": "../activities/2_psychological/psychological_questionnaire_schema",
             "variableName": "psychological_questionnaire_schema",
             "prefLabel": {"en": "Psychological Questions"}
+            },
+            {"isAbout": "../activities/3_clinical/clinical_schema",
+            "variableName": "clinical_schema",
+            "prefLabel": {"en": "Clinical Questions"}
+            },
+            {"isAbout": "../activities/4_speech/speech_schema",
+            "variableName": "speech_schema",
+            "prefLabel": {"en": "Speech Test"}
+            },
+            {"isAbout": "../activities/5_feedback/feedback_schema",
+            "variableName": "feedback_schema",
+            "prefLabel": {"en": "Feedback"}
             }
         ],
     "order": [
             "../activities/0_consent/consent_schema",
+            "../activities/0_audio/audio_check_schema",
 	        "../activities/1_demographics/demographics_schema",
-            "../activities/2_psychological/psychological_questionnaire_schema"
+            "../activities/2_psychological/psychological_questionnaire_schema",
+            "../activities/3_clinical/clinical_schema",
+            "../activities/4_speech/speech_schema",
+            "../activities/5_feedback/feedback_schema"
         ],
 		"shuffle": false,
 		"allow": [

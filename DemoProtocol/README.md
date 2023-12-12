@@ -13,7 +13,7 @@
 <section>
 <div class="container-fluid">
   <h2>Welcome to the Demonstration Protocol</h2>
-  <p>This is a Demonstration Protocol.</p>
+  <p>This is a Demonstration Protocol, adopted from <a  href="https://github.com/sensein/mood-protocol">mood-protocol</a>.</p>
   <p>In this protocol, we will collect voice biomarker data for mood disorders. 
     Should you feel uncomfortable continuing at any point of the protocol, you can exit it and not submit your answers.
     You can review and modify your answers until you submit them at the end of the protocol.
