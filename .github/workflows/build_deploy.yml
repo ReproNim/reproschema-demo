@@ -2,6 +2,9 @@
 
 name: CI
 
+env:
+  CHECKSUM:  4a1c3beba1790e900cd102c0bae6f8419e9d753e
+  
 on:
   push:
     branches: [ main ]
@@ -22,17 +25,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-
-    # Install jq if it's not already available
-    - name: Install jq
-      run: sudo apt-get install jq
-
-    # Fetch the latest commit hash
-    - name: Get latest commit hash from reproschema-ui
-      run: |
-        LATEST_HASH=$(curl -s https://api.github.com/repos/ReproNim/reproschema-ui/commits/master | jq -r '.sha')
-        echo "CHECKSUM=$LATEST_HASH" >> $GITHUB_ENV
-
+        
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
@@ -60,8 +53,8 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: |
-        curl -O -sSL https://github.com/ReproNim/reproschema-ui/archive/4a1c3beba1790e900cd102c0bae6f8419e9d753e.zip
-        unzip 4a1c3beba1790e900cd102c0bae6f8419e9d753e.zip
+        curl -O -sSL https://github.com/ReproNim/reproschema-ui/archive/${CHECKSUM}.zip
+        unzip ${CHECKSUM}.zip
         mv reproschema* ui
         cd ui
         cp -r ../ui-changes/. .
