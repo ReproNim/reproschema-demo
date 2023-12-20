@@ -64,15 +64,12 @@ jobs:
         unzip ${CHECKSUM}.zip
         mv reproschema* ui
         cd ui
+        cp ../ui-changes/src/setTitle.js dist/
         cp -r ../ui-changes/. .
         npm install
         npm run build
         touch dist/.nojekyll
-    
-    - name: Include Custom Title Script
-      run: |
-        cp ../ui-changes/src/setTitle.js dist/
-        node dist/setTitle.js
+        node dist/setTitle.js        
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
