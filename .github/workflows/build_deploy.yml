@@ -64,12 +64,12 @@ jobs:
         unzip ${CHECKSUM}.zip
         mv reproschema* ui
         cd ui
-        cp ../ui-changes/src/setTitle.js dist/
         cp -r ../ui-changes/. .
+        # Modify the title in index.html
+        sed -i 's/<title>.*<\/title>/<title>Reproschema Demo<\/title>/' public/index.html
         npm install
         npm run build
         touch dist/.nojekyll
-        node dist/setTitle.js        
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
